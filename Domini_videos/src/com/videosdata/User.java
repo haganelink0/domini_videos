@@ -76,56 +76,5 @@ public class User {
 	public void getVideo(String title) {
 		this.videoList.get(title);
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((registerDate == null) ? 0 : registerDate.hashCode());
-		result = prime * result + ((userLastName == null) ? 0 : userLastName.hashCode());
-		result = prime * result + ((userName == null) ? 0 : userName.hashCode());
-		result = prime * result + ((videoList == null) ? 0 : videoList.hashCode());
-		return result;
-	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		User other = (User) obj;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		if (registerDate == null) {
-			if (other.registerDate != null)
-				return false;
-		} else if (!registerDate.equals(other.registerDate))
-			return false;
-		if (userLastName == null) {
-			if (other.userLastName != null)
-				return false;
-		} else if (!userLastName.equals(other.userLastName))
-			return false;
-		if (userName == null) {
-			if (other.userName != null)
-				return false;
-		} else if (!userName.equals(other.userName))
-			return false;
-		if (videoList == null) {
-			if (other.videoList != null)
-				return false;
-		} else if (!videoList.equals(other.videoList))
-			return false;
-		return true;
-	}
-	
-	
-	
-
 }
